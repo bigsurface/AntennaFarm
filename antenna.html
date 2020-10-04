@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="libs/p5.js"></script>
+    <script src="libs/p5.sound.js"></script>
+    <script src="Pendulum.js"></script>
+    <script src="Pendulum2.js"></script>
+    <script src="Pendulum3.js"></script>
+    <script src="index.js"></script>
+    <style>
+        .antenna{
+            width: 46px;
+            height: 46px;
+            background-color: black;
+            position: absolute;
+            margin-left: 275px;
+            margin-top: 760px;
+            border-radius: 50%;
+            border-color: red;
+        }
+
+        .miner{
+            width: 460px;
+            height: 460px;
+            background-color: black;
+            position: absolute;
+            border-radius: 50%;
+            border-color: red;
+            margin-left: 300px;
+            text-align: end;
+        }
+
+        .mask{
+            text-align: center;
+            margin-top: 115px;
+            margin-left: 200px;
+        }
+
+        .hero{
+            text-align: center;
+            margin-top: 160px;
+            margin-left: 40px;
+        }
+
+        .randombackground{
+            width: 1350px;
+            height: 600px;
+            position: relative;
+            margin-top: 0px;
+            background-image: url('imgs/2.jpg');
+
+        }
+
+        /* .villain{
+            text-align: center;
+            width: 460px;
+            height: 460px;
+            margin-top: 60px;
+            padding-left: 50px;
+        } */
+    </style>
+
+    <title>SnakeVsFox</title>
+</head>
+<body>
+    
+        <div class="randombackground">
+            <div class="antenna"><a href="stoptheants.html"><span style="background-color: turquoise">*</span>Ant<span style="background-color: turquoise">*</span></a>
+    <div class="miner"><a href="digahole.html"> <b><br><span style="background-color: black">*-_-_-*</span></b></a>
+       <div class="mask"><a href="sunglasses.html"><h1 style= "border:30px solid turquoise;"><b><br>POUR</b></h1></a>
+</div>
+<div class="hero"><a href="hero.html"><h1 style= "border:50px solid peachpuff;"><b>HERO ACCESS<br></b></h1></a></div></div>
+<!-- <div class="villain"><a href="villain.html"><h1 style= "border:30px solid violet;"><span style="background-color: purple;"><b><br>VILLAINS<br></b></span></h1></a></div></div> -->
+ </div></div>  <h2 style= "background-image: url(imgs/1.jpg)">Snake Vs Fox
+    <br>
+    <b>Oh no!! An Ant!!!</b></h2>
+    <script>
+
+        const getRandomColor = () => `#${Math.floor(Math.random()*16777215).toString(16)}`; 
+        const elements = document.querySelectorAll('.mouth');
+        elements.forEach(element => element.style.backgroundColor=getRandomColor());
+        const elements2 = document.querySelectorAll('.hero');
+        elements2.forEach(element2 => element2.style.backgroundColor=getRandomColor());
+        const elements3 = document.querySelectorAll('.villain');
+        elements3.forEach(element3 => element3.style.backgroundColor=getRandomColor());
+       
+        </script>
+</body>
+</html>

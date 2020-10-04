@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="libs/p5.js"></script>
+    <script src="libs/p5.sound.js"></script>
+    <script src="Pendulum.js"></script>
+    <script src="Pendulum2.js"></script>
+    <script src="Pendulum3.js"></script>
+    <script src="index4.js"></script>
+    <style>
+
+        .darkcanvas{
+            width: 440px;
+            height: 500px;
+            background-image: url('imgs/1.jpg');
+            position: relative;
+            margin-left: 10px;
+        }
+        .antenna{
+            width: 46px;
+            height: 46px;
+            background-color: black;
+            position: absolute;
+            margin-left: 275px;
+            margin-top: 0px;
+            border-radius: 50%;
+            border-color: red;
+        }
+
+        .miner{
+            width: 460px;
+            height: 460px;
+            background-image: url('imgs/1.jpg');
+            position: relative;
+            border-radius: 50%;
+            border-color: red;
+            margin-left: 300px;
+            text-align: center;
+        }
+
+        .mask{
+            text-align: center;
+            margin-top: 115px;
+            margin-left: 0px;
+            background-image: url('imgs/2.jpg');
+        }
+
+        .hero{
+            text-align: center;
+            margin-top: 160px;
+            margin-left: 40px;
+        }
+
+        .villain{
+            text-align: center;
+            width: 460px;
+            height: 460px;
+            margin-top: 60px;
+            padding-left: 50px;
+            margin-left: -500px;
+        }
+
+        .randombackground{
+            width: 1350px;
+            height: 600px;
+            position: relative;
+            margin-top: 0px;
+            background-image: url('imgs/5.jpg');
+
+        }
+    </style>
+
+    <title>SnakeVsFox</title>
+</head>
+<body>
+    <div class="randombackground">
+    <div class="antenna"><a href="stoptheants.html"><span style="background-color: turquoise"></span><span style="background-color: turquoise"></span></a>
+    <div class="miner"><a href="moon.html"> <b><br><span style="background-color: black">Have you been to the moon?</span></b></a>
+        <div class="darkcanvas"><div class="mask"><a href="darker.html"><h1 style= "border:30px transparent yellow;"><b><br></b></h1></a>
+</div>
+<div class="hero"><a href="deadheroes.html"><h1 style= "border:50px solid tomato;"><span style="background-image: url('imgs/2.jpg');"><b>DEAD HEROES<br></b></span></h1></a></div>
+<div class="villain"><a href="supervillain.html"><h1 style= "border:30px solid violet;"><span style="background-image: url('imgs/0.jpg');"><b><br>SUPER VILLAIN<br></b></span></h1></a></div></div></div>
+</div></div>
+    <br>
+    <b style= "background-image: url('imgs/1.jpg');">You're a</b>
+    <script>
+
+        const getRandomColor = () => `#${Math.floor(Math.random()*16777215).toString(16)}`; 
+        const elements = document.querySelectorAll('.mouth');
+        elements.forEach(element => element.style.backgroundColor=getRandomColor());
+        const elements2 = document.querySelectorAll('.hero');
+        elements2.forEach(element2 => element2.style.backgroundColor=getRandomColor());
+        const elements3 = document.querySelectorAll('.villain');
+        elements3.forEach(element3 => element3.style.backgroundColor=getRandomColor());
+       
+        </script>
+</body>
+</html>

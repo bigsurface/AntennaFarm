@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="libs/p5.js"></script>
+    <script src="libs/p5.sound.js"></script>
+    <script src="fox.js"></script>
+    <script src="snake.js"></script>
+    <!-- <script src="hero2.js"></script> -->
+    <script src="heroindex2.js"></script>
+    <style>
+    
+
+        .mask{
+            text-align: center;
+            margin-top: 0px;
+            margin-left: 0px;
+            position: absolute;
+        }
+
+        .hero{
+            text-align: center;
+            margin-top: 0px;
+            margin-left: 0px;
+            position: absolute top;
+        }
+
+        .fox{
+            text-align: left;
+            margin-top: 10px;
+            margin-left: 50px;
+            position: absolute;
+        }
+
+        .snake{
+            text-align: left;
+            margin-top: 10px;
+            margin-left: 850px;
+            position: absolute;
+
+        }
+
+    </style>
+
+    <title>SnakeVsFox</title>
+</head>
+<body>
+<div class="hero"><a href="index.html"><h1 style= "border:50px solid peachpuff;"><b>HERO EXIT<br></b></h1></a></div></div>
+
+<div class="fox">
+    <h1 style= "color: gold";>Fox.js</h1>
+    <h3><b>class Fox {</b></h3>
+    <h4>
+    constructor(tail) {<br>
+      this.x = random(width);<br>
+      this.y = random(height);<br>
+      this.diameter = random(10, 30);<br>
+      this.speed = 1;<br>
+    }<br>
+  <br>
+    move() {<br>
+      this.x += random(-this.speed, this.speed);<br>
+      this.y += random(-this.speed, this.speed);<br>
+    }<br>
+  <br>
+    display() {<br>
+      ellipse(this.x, this.y, this.diameter, this.diameter);<br>
+    }<br><br>
+  }</div>
+<div class="snake">
+    <h1 style= "color: gold";>Snake.js</h1>
+    <h3><b>class Snake {</b></h3>
+    <h4>
+    constructor(rattle) {<br>
+      this.x = random(width);<br>
+      this.y = random(height);<br>
+      this.diameter = random(10, 30);<br>
+      this.speed = 10;<br>
+    }<br>
+  <br>
+    move() {<br>
+      this.x += random(-this.speed, this.speed);<br>
+      this.y += random(-this.speed, this.speed);<br>
+    }<br>
+  <br>
+    display() {<br>
+      ellipse(this.x, this.y, this.diameter, this.diameter);<br>
+    }<br><br>
+  }</div>
+    <script>
+
+        const getRandomColor = () => `#${Math.floor(Math.random()*16777215).toString(16)}`; 
+        const elements = document.querySelectorAll('.mouth');
+        elements.forEach(element => element.style.backgroundColor=getRandomColor());
+        const elements2 = document.querySelectorAll('.hero');
+        elements2.forEach(element2 => element2.style.backgroundColor=getRandomColor());
+        const elements3 = document.querySelectorAll('.villain');
+        elements3.forEach(element3 => element3.style.backgroundColor=getRandomColor());
+       
+        </script>
+</body>
+</html>

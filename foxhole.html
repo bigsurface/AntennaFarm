@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="libs/p5.js"></script>
+    <script src="libs/p5.sound.js"></script>
+    <script src="foxhole.js"></script>
+    <script src="foxindex.js"></script>
+    <style>
+    
+
+        .mask{
+            text-align: center;
+            margin-top: 0px;
+            margin-left: 0px;
+            position: absolute;
+        }
+
+        .hero{
+            text-align: center;
+            margin-top: 0px;
+            margin-left: 0px;
+            position: absolute top;
+        }
+
+        .fox{
+            text-align: left;
+            margin-top: 400px;
+            margin-left: 500px;
+            position: absolute;
+        }
+
+        .snake{
+            text-align: left;
+            margin-top: 400px;
+            margin-left: 850px;
+            position: absolute;
+
+        }
+
+    </style>
+
+    <title>SnakeVsFox</title>
+</head>
+<body>
+<div class="hero"><a href="hero.html"><h1 style= "border:50px solid peachpuff;"><b>HERO ACCESS<br></b></h1></a></div></div>
+
+<div class="fox"><h3><b>class Foxhole {</b></h3>
+    <h4>
+    constructor(home) {<br>
+      this.x = random(width);<br>
+      this.y = random(height);<br>
+      this.diameter = 46;<br>
+      this.hillside = background('rgba(0,255,0, 0.25)');<br>
+    }<br>
+  <br>
+    display() {<br>
+      ellipse(this.x, this.y, this.diameter, this.diameter);<br>
+      
+    }<br><br>
+  }</div>
+
+    <script>
+
+        const getRandomColor = () => `#${Math.floor(Math.random()*16777215).toString(16)}`; 
+        const elements = document.querySelectorAll('.mouth');
+        elements.forEach(element => element.style.backgroundColor=getRandomColor());
+        const elements2 = document.querySelectorAll('.hero');
+        elements2.forEach(element2 => element2.style.backgroundColor=getRandomColor());
+        const elements3 = document.querySelectorAll('.villain');
+        elements3.forEach(element3 => element3.style.backgroundColor=getRandomColor());
+       
+        </script>
+</body>
+</html>
